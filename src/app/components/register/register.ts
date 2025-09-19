@@ -48,7 +48,7 @@ export class Register {
   onSubmit() {
     if (this.registerForm.valid) {
       console.log(this.registerForm.value);
-      this.toast.success('Login successfully!');
+      this.toast.success('Register successfully!');
 
       setTimeout(() => {
         this.router.navigate(['/login']);

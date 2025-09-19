@@ -71,6 +71,11 @@ export class CartService {
     }
   }
 
+  processDone() {
+    this.cart = [];
+    this.saveCart();
+  }
+
   private saveCart() {
     localStorage.setItem('cart', JSON.stringify(this.cart));
     this.cartChanged.emit();

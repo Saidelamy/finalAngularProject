@@ -9,12 +9,14 @@ import { ProductDetails } from './components/product-details/product-details';
 import { guestGuard } from './guards/guest-guard';
 import { loginGuard } from './guards/login-guard';
 import { Checkout } from './components/checkout/checkout';
+import { Done } from './components/done/done';
 
 export const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'home', component: Home },
   { path: 'cart', component: Cart, canActivate: [loginGuard] },
   { path: 'checkout', component: Checkout, canActivate: [loginGuard] },
+  { path: 'done', component: Done, canActivate: [loginGuard] },
   { path: 'products', component: Products },
   { path: 'product-details/:id', component: ProductDetails },
   { path: 'login', component: Login, canActivate: [guestGuard] },

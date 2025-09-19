@@ -33,7 +33,6 @@
       </div>
     </div>
 
-    <!-- Order Summary -->
     <div class="col-md-5">
       <div class="card shadow-sm">
         <div class="card-body">
@@ -51,7 +50,9 @@
             </li>
           </ul>
 
-          <button class="btn btn-primary w-100 btn-lg">Proceed to Payment</button>
+          <button (click)="processDone()" class="btn btn-accent w-100 btn-lg">
+            Proceed to Payment
+          </button>
         </div>
       </div>
     </div>
