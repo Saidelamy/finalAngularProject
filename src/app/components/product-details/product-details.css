@@ -1,0 +1,56 @@
+/* Product Details Card */
+.product-details-card {
+  background-color: #333446; /* خلفية أساسية داكنة */
+  color: #eaefef; /* النصوص فاتحة */
+}
+
+/* صورة المنتج */
+.product-image {
+  background-color: #b8cfce; /* خلفية للصورة */
+}
+.product-image img {
+  max-height: 350px;
+  object-fit: contain;
+}
+
+/* تفاصيل المنتج */
+.product-info h2 {
+  color: #eaefef;
+}
+.product-info .category {
+  color: #b8cfce;
+  font-style: italic;
+}
+.product-info .description {
+  color: #eaefef;
+  opacity: 0.9;
+}
+.product-info .price {
+  color: #93da97;
+  font-weight: bold;
+}
+.product-info .rating {
+  color: #ffd700; /* أصفر للنجوم */
+}
+
+/* أزرار */
+.btn-accent {
+  background-color: #93da97;
+  color: #333446;
+  font-weight: bold;
+  border: none;
+}
+.btn-accent:hover {
+  background-color: #78b87b;
+  color: #fff;
+}
+
+.btn-outline-light-custom {
+  border: 2px solid #b8cfce;
+  color: #b8cfce;
+  font-weight: bold;
+}
+.btn-outline-light-custom:hover {
+  background-color: #b8cfce;
+  color: #333446;
+}

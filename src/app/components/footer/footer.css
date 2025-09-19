@@ -1,0 +1,40 @@
+/* Footer */
+.footer-dark {
+  background: #333446;
+  color: #ccc;
+  margin-top: 40px;
+  border-top: 1px solid #ccc;
+}
+
+.footer-dark h5 {
+  color: #fff;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.footer-link {
+  color: #aaa;
+  text-decoration: none;
+  transition: 0.3s;
+}
+.footer-link:hover {
+  color: #4cafef;
+}
+
+/* أيقونات السوشيال */
+.social-icon {
+  font-size: 1.5rem;
+  color: #aaa;
+  transition: 0.3s;
+}
+.social-icon:hover {
+  color: #4cafef;
+  transform: scale(1.2);
+}
+
+/* البوتوم */
+.footer-bottom {
+  background: #1b1c27;
+  color: #d6d6d6;
+  font-size: 0.9rem;
+}

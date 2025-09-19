@@ -1,0 +1,74 @@
+/* الخلفية العامة */
+.products-container {
+  background-color: #eaefef; /* فاتح جدا */
+  padding: 20px;
+  border-radius: 12px;
+  color: #333446; /* نص غامق */
+}
+
+/* Select Box */
+.custom-select {
+  background-color: #b8cfce; /* فاتح متوسط */
+  border: none;
+  color: #333446;
+}
+.custom-select option {
+  background-color: #eaefef;
+  color: #333446;
+}
+
+/* الكارد */
+.product-card {
+  background-color: #7f8caa; /* أغمق من الخلفية */
+  color: #fff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+.product-img {
+  height: 200px;
+  object-fit: contain;
+  background-color: #eaefef; /* خلفية فاتحة للصور */
+}
+
+/* النصوص */
+.text-accent {
+  color: #333446 !important; /* نص أساسي غامق */
+}
+
+/* الأزرار */
+.btn-accent {
+  background-color: #333446; /* أغمق لون */
+  border: none;
+  color: #eaefef;
+}
+.btn-accent:hover {
+  background-color: #7f8caa;
+  color: #fff;
+}
+.btn-outline-light {
+  border: 1px solid #333446;
+  color: #d9d9d9;
+  font-size: 15px;
+}
+.btn-outline-light:hover {
+  background-color: #b8cfce;
+  color: #333446;
+}
+
+/* Pagination */
+.custom-page {
+  background-color: #b8cfce;
+  border: none;
+  color: #333446;
+}
+.page-item.active .custom-page {
+  background-color: #323949;
+  color: #fff;
+}
+.page-item.disabled .custom-page {
+  background-color: #eaefef;
+  color: #aaa;
+}

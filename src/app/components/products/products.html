@@ -1,0 +1,83 @@
+@if (products) {
+<main class="container my-5 products-container">
+  <!-- search & filter -->
+  <div class="row mb-4">
+    <div class="col-md-8 mb-2 mb-md-0">
+      <app-search-product (search)="searchTerm = $event; applyFilter()"></app-search-product>
+    </div>
+    <div class="col-md-4">
+      <select
+        class="form-select custom-select"
+        [(ngModel)]="selectedCategory"
+        (change)="applyFilter()"
+      >
+        @for (cat of categories; track $index) {
+        <option [value]="cat">{{ cat }}</option>
+        }
+      </select>
+    </div>
+  </div>
+
+  <!-- product cards -->
+  <div class="row g-4">
+    @for (product of pagedProducts; track $index) {
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+      <div class="card product-card h-100 shadow-lg border-0 rounded-4">
+        <img
+          [src]="product.image"
+          class="card-img-top p-3 rounded-top-4 product-img"
+          alt="{{ product.title }}"
+        />
+        <div class="card-body d-flex flex-column">
+          <h6 class="card-title fw-bold text-light text-truncate">
+            {{ product.title }}
+          </h6>
+          <p class="card-text small text-white">{{ product.description.slice(0, 80) }}...</p>
+
+          <p class="fw-bold text-accent mb-1">
+            {{ product.price | currency }}
+          </p>
+          <p class="text-warning mb-2">
+            ⭐ {{ product.rating.rate }} ({{ product.rating.count }} reviews)
+          </p>
+
+          <div class="d-flex gap-2 mt-auto">
+            <button class="btn btn-outline-light w-50" (click)="addToCart(product)">
+              🛒 Add to cart
+            </button>
+            <button class="btn btn-accent w-50" (click)="handleViewDetails(product.id)">
+              🔍 Details
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    }
+  </div>
+
+  <!-- pagination -->
+  <ul class="pagination justify-content-center mt-4">
+    <li class="page-item" [class.disabled]="currentPage === 1">
+      <button class="page-link custom-page" (click)="goToPage(currentPage - 1)">« Prev</button>
+    </li>
+
+    @for (page of pages; let i = $index; track i) {
+    <li class="page-item" [class.active]="currentPage === i + 1">
+      <button class="page-link custom-page" (click)="goToPage(i + 1)">
+        {{ i + 1 }}
+      </button>
+    </li>
+    }
+
+    <li class="page-item" [class.disabled]="currentPage === totalPages">
+      <button class="page-link custom-page" (click)="goToPage(currentPage + 1)">Next »</button>
+    </li>
+  </ul>
+</main>
+} @else {
+<div class="d-flex justify-content-center align-items-center vh-100 bg-dark">
+  <div class="spinner-border text-accent" style="width: 4rem; height: 4rem" role="status">
+    <span class="visually-hidden">Loading...</span>
+  </div>
+</div>
+}

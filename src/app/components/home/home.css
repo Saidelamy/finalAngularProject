@@ -1,0 +1,52 @@
+.landing-page {
+  position: relative;
+  height: 100vh;
+  background-image: url('../../../../public/landing.avif');
+  background-position: center;
+  background-size: cover;
+}
+
+.landing-page .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(51, 52, 70, 0.6);
+}
+
+.landing-page .content {
+  position: relative;
+  z-index: 2;
+  max-width: 700px;
+  padding: 20px;
+  color: #eaefef;
+}
+
+.landing-page h1 {
+  font-size: 3rem;
+}
+.landing-page h1 span {
+  color: #93da97;
+}
+.landing-page p {
+  font-size: 1.2rem;
+  margin-top: 10px;
+  color: #b8cfce;
+  padding: 15px;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.btn-accent {
+  background-color: #93da97;
+  color: #333446;
+  font-weight: bold;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 30px;
+  transition: 0.3s ease;
+}
+.btn-accent:hover {
+  background-color: #78b87b;
+  color: #fff;
+}

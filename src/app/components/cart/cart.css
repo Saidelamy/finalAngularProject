@@ -1,0 +1,52 @@
+/* Cart Container */
+.cart-container {
+  background-color: #333446; /* خلفية أساسية */
+  color: #eaefef; /* النص أبيض فاتح */
+}
+
+/* Table */
+.cart-table {
+  background-color: #7f8caa;
+  color: #eaefef;
+}
+.cart-table th {
+  background-color: #5e677f; /* أغمق من الجدول */
+  color: #eaefef;
+}
+.cart-table td {
+  vertical-align: middle;
+}
+
+/* Cart Total inside rows */
+.cart-total {
+  background-color: #b8cfce;
+  color: #333446;
+  font-weight: bold;
+}
+
+/* Cart Summary */
+.cart-summary {
+  background-color: #7f8caa;
+  color: #fff;
+}
+.cart-summary h4 {
+  color: #eaefef;
+}
+
+/* Buttons */
+.btn-success {
+  background-color: #3e5f44 !important;
+  border: none;
+}
+.btn-success:hover {
+  background-color: #2c4532 !important;
+}
+
+.btn-warning {
+  background-color: #93da97 !important;
+  border: none;
+  color: #333446 !important;
+}
+.btn-warning:hover {
+  background-color: #78b87b !important;
+}
