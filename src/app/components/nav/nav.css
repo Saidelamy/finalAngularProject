@@ -1,35 +1,30 @@
-/* Navbar */
 .custom-navbar {
-  background-color: #333446; /* غامق أساسي */
+  background-color: #333446;
 }
 
-/* Brand */
 .custom-navbar .navbar-brand {
-  color: #eaefef !important; /* فاتح */
+  color: #eaefef !important;
 }
 .custom-navbar .navbar-brand:hover {
   color: #b8cfce !important;
 }
 
-/* Links */
 .custom-navbar .nav-link {
   color: #eaefef !important;
   transition: 0.3s;
 }
 .custom-navbar .nav-link.active,
 .custom-navbar .nav-link:hover {
-  color: #93da97 !important; /* لون مميز عند التفاعل */
+  color: #93da97 !important;
 }
 
-/* Toggler */
 .custom-toggler {
   border: none;
 }
 .custom-toggler .navbar-toggler-icon {
-  filter: invert(90%); /* يخلي الأيقونة فاتحة */
+  filter: invert(90%);
 }
 
-/* Badge (Cart) */
 .custom-badge {
   background-color: #7f8caa;
   color: #fff;

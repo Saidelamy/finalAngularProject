@@ -7,7 +7,7 @@ import { IProduct } from '../models/iproduct';
 export class CartService {
   private cart: IProduct[] = [];
 
-  // to make quantity automatic refresh
+  // to make quantity automatic refresh in cart icon in navbar like data flow from parent to child
   cartChanged = new EventEmitter<void>();
 
   constructor() {
@@ -20,6 +20,7 @@ export class CartService {
   addToCart(product: IProduct) {
     const productExist = this.cart.find((p) => product.id === p.id);
     if (productExist) {
+      // || 1 because quantity can be undefine
       productExist.quantity = (productExist.quantity || 1) + 1;
     } else {
       product.quantity = 1;

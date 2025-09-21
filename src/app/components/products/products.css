@@ -1,14 +1,12 @@
-/* الخلفية العامة */
 .products-container {
-  background-color: #eaefef; /* فاتح جدا */
+  background-color: #eaefef;
   padding: 20px;
   border-radius: 12px;
-  color: #333446; /* نص غامق */
+  color: #333446;
 }
 
-/* Select Box */
 .custom-select {
-  background-color: #b8cfce; /* فاتح متوسط */
+  background-color: #b8cfce;
   border: none;
   color: #333446;
 }
@@ -17,9 +15,8 @@
   color: #333446;
 }
 
-/* الكارد */
 .product-card {
-  background-color: #7f8caa; /* أغمق من الخلفية */
+  background-color: #7f8caa;
   color: #fff;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -30,17 +27,15 @@
 .product-img {
   height: 200px;
   object-fit: contain;
-  background-color: #eaefef; /* خلفية فاتحة للصور */
+  background-color: #eaefef;
 }
 
-/* النصوص */
 .text-accent {
-  color: #333446 !important; /* نص أساسي غامق */
+  color: #333446 !important;
 }
 
-/* الأزرار */
 .btn-accent {
-  background-color: #333446; /* أغمق لون */
+  background-color: #333446;
   border: none;
   color: #eaefef;
 }

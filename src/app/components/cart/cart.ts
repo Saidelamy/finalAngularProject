@@ -34,7 +34,7 @@ export class Cart implements OnInit {
 
   decreseQountity(id: number) {
     this._cartService.decreaseQuntity(id);
-    // use to refresh the cart after quantity reach to zero
+    // use to refresh the cart after quantity reach to zero and the product hidden
     this.cart = this._cartService.getCart();
     this.loadCart();
   }

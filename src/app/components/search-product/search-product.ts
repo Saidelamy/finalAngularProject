@@ -12,6 +12,7 @@ import { ProductService } from '../../services/product-service';
 })
 export class SearchProduct {
   searchQuery: string = '';
+  // from child to parent
   @Output() search = new EventEmitter<string>();
 
   onSearch() {

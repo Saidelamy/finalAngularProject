@@ -21,7 +21,7 @@ import { ToastrService } from 'ngx-toastr';
 export class Register {
   registerForm: any;
 
-  constructor(private router: Router, private http: HttpClient, private toast: ToastrService) {
+  constructor(private router: Router, private toast: ToastrService) {
     this.registerForm = new FormGroup(
       {
         fullName: new FormControl('', [Validators.required]),

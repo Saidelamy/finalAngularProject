@@ -1,19 +1,16 @@
-/* Product Details Card */
 .product-details-card {
-  background-color: #333446; /* خلفية أساسية داكنة */
-  color: #eaefef; /* النصوص فاتحة */
+  background-color: #333446;
+  color: #eaefef;
 }
 
-/* صورة المنتج */
 .product-image {
-  background-color: #b8cfce; /* خلفية للصورة */
+  background-color: #b8cfce;
 }
 .product-image img {
   max-height: 350px;
   object-fit: contain;
 }
 
-/* تفاصيل المنتج */
 .product-info h2 {
   color: #eaefef;
 }
@@ -30,10 +27,9 @@
   font-weight: bold;
 }
 .product-info .rating {
-  color: #ffd700; /* أصفر للنجوم */
+  color: #ffd700;
 }
 
-/* أزرار */
 .btn-accent {
   background-color: #93da97;
   color: #333446;

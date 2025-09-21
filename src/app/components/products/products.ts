@@ -41,23 +41,23 @@ export class Products implements OnInit {
     this._productService.getAllProducts().subscribe({
       next: (data) => {
         this.products = data;
+        // get category of sort equal all and another categories come from api and put them in array
         this.categories = ['all', ...new Set(this.products.map((p) => p.category))];
         console.log(this.categories, data);
         this.applyFilter();
       },
       error: (err) => console.error(err),
     });
+
     console.log('after subscribe');
   }
 
   applyFilter() {
-    const lower = this.searchTerm.toLowerCase();
-
     this.filteredProducts = this.products.filter((p) => {
       const matchFilter =
-        p.title.toLowerCase().includes(lower) ||
-        p.description.toLowerCase().includes(lower) ||
-        p.category.toLowerCase().includes(lower);
+        p.title.toLowerCase().includes(this.searchTerm.toLowerCase()) ||
+        p.description.toLowerCase().includes(this.searchTerm.toLowerCase()) ||
+        p.category.toLowerCase().includes(this.searchTerm.toLowerCase());
 
       const matchCategory = this.selectedCategory === 'all' || this.selectedCategory === p.category;
 
@@ -96,9 +96,10 @@ export class Products implements OnInit {
       this.router.navigate(['/login']);
     }
   }
+
+  // mange pagination
   get pages(): number[] {
-    return Array(this.totalPages)
-      .fill(0)
-      .map((x, i) => i + 1);
+    // Array - create new array has length = total pages +1
+    return Array.from({ length: this.totalPages }, (_, i) => i + 1);
   }
 }

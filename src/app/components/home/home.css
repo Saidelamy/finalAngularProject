@@ -1,7 +1,7 @@
 .landing-page {
   position: relative;
   height: 100vh;
-  background-image: url('../../../../public/landing.avif');
+  background-image: url('/landing.avif');
   background-position: center;
   background-size: cover;
 }
