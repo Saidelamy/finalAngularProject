@@ -54,16 +54,19 @@ export class Products implements OnInit {
 
   applyFilter() {
     this.filteredProducts = this.products.filter((p) => {
+      // filter
       const matchFilter =
         p.title.toLowerCase().includes(this.searchTerm.toLowerCase()) ||
         p.description.toLowerCase().includes(this.searchTerm.toLowerCase()) ||
         p.category.toLowerCase().includes(this.searchTerm.toLowerCase());
 
+      // sort
       const matchCategory = this.selectedCategory === 'all' || this.selectedCategory === p.category;
 
       return matchFilter && matchCategory;
     });
 
+    // pagination
     this.currentPage = 1;
     this.totalPages = Math.ceil(this.filteredProducts.length / this.numberOfProductsInPage);
     this.updatePage();
